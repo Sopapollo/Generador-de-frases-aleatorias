@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Generador de frases aleatorias</title>
+</head>
+<body>
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            background: linear-gradient(rgb(241, 246, 247), rgb(160, 241, 247), rgb(123, 183, 248), rgb(88, 94, 252));
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            
+            
+            
+            
+        }
+
+        #frase {
+            background-color:azure;
+            padding: 25px 30px;
+            border: none;
+            border-radius: 10px;
+            margin: 20px 0;
+            font-size: 20px;
+            box-shadow: 0 5px rgb(209, 230, 241)
+        }
+
+        button {
+            font-family: inherit;
+            padding: 10px 15px;
+            font-size: 20px;
+            border: none;
+            border-radius: 5px;
+            background-color: whitesmoke;
+            box-shadow: 0 5px #d8c9c9;
+            cursor: pointer;
+            
+        }
+
+        button:hover {
+            background-color: rgb(229, 221, 221);
+        }
+    </style>
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+    
+    <div id="frase"></div>
+    <button onclick="MostrarFrase()">Generar frase</button>
+
+    <script>
+        let Hoy = new Date();
+        const frases = [
+            "Eres un sopapollo!",
+            "FraseMuyOriginal.txt",
+            "Eres muy genial!",
+            "Hoy es " + Hoy.toDateString(),
+            "Si una puerta está cerrada, es porque no está abierta",
+            "Dejaste la estufa encendida",
+            "La risa es la mejor medicina",
+            "Hay alguien atrás observandote",
+            "Buenn díaa",
+            "El que mucho abarca, poco aprieta",
+            "De tal palo, tal astilla",
+            "Al que madruga, Dios le ayuda",
+            "Mas vale tarde que nunca",
+            "Barriga llena, corazón contento",
+            "Hoy por ti, mañana por mí",
+            "El que bien hace, es un sopapollo",
+
+            
+        ]
+
+
+        function GenerarFrase() {
+            const indice = Math.floor(Math.random() * frases.length);
+            return frases[indice]
+        }
+
+        function MostrarFrase() {
+            document.getElementById("frase").innerText = GenerarFrase();
+        }
+    </script>
+</body>
+</html>
