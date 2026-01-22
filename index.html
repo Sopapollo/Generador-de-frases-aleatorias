@@ -20,16 +20,18 @@
             
             
         }
-
+        
         #frase {
             background-color:azure;
             padding: 25px 30px;
             border: none;
             border-radius: 10px;
+            text-align: justify;
             margin: 20px 0;
             font-size: 20px;
             box-shadow: 0 5px rgb(209, 230, 241)
         }
+    
 
         button {
             font-family: inherit;
@@ -45,6 +47,14 @@
 
         button:hover {
             background-color: rgb(229, 221, 221);
+        }
+
+        @media (max-width: 600px) {
+            #frase {
+                text-align: justify;
+                font-size: 18px;
+                padding: 20px;
+            }
         }
     </style>
 
@@ -87,5 +97,4 @@
         }
     </script>
 </body>
-
 </html>
